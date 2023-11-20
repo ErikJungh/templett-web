@@ -7,24 +7,17 @@ import { HeroComponent } from './components/hero/hero.component';
 import { ScrollHeroAnimationDirective } from './directives/hero-scroll-animation.directive';
 import { HeaderComponent } from './components/header/header.component';
 import { PhoneAnimationComponent } from './components/phone-animation/phone-animation.component';
-import { OpenPhoneAnimationDirective } from './directives/open-phone-animation.directive';
-
-
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroComponent,
     ScrollHeroAnimationDirective,
-    OpenPhoneAnimationDirective,
     HeaderComponent,
-    PhoneAnimationComponent
+    PhoneAnimationComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
