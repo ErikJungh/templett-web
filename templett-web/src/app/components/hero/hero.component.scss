@@ -1,8 +1,10 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 320vh 100vh;
+  grid-template-rows: 320vh ;
   background-color: #6200ee;
+  scroll-behavior: smooth;
+
 
   .section {
     grid-row: 1;
@@ -10,7 +12,7 @@
 
     .tunnel {
       animation-delay: inherit;
-      background-image: url("../../../assets/images/hero-isle.jpg");
+      background-image: linear-gradient(to bottom, #4B0082, #000000);
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
