@@ -30,7 +30,6 @@ import { AnimateIncrementDirective } from './directives/animated-increment.direc
     StatsSectionComponent,
     BenefitsSectionComponent,
     FaqSectionComponent,
-    
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
