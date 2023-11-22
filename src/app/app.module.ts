@@ -16,6 +16,10 @@ import { FaqSectionComponent } from './components/faq-section/faq-section.compon
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AnimateIncrementDirective } from './directives/animated-increment.directive';
 import { StickerComponent } from './components/sticker/sticker.component';
+import { MobileBenefitsSectionComponent } from './components/mobile-benefits-section/mobile-benefits-section.component';
+import { MobileHeaderComponent } from './components/mobile-header/mobile-header.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +36,10 @@ import { StickerComponent } from './components/sticker/sticker.component';
     BenefitsSectionComponent,
     FaqSectionComponent,
     StickerComponent,
+    MobileBenefitsSectionComponent,
+    MobileHeaderComponent,
+    SidenavComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],

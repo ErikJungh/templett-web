@@ -1,0 +1,35 @@
+<div id="benefitsSection" class="w-full h-auto justify-center flex mx-auto">
+  <div class="hide-before-animate w-full" animateDivEntry>
+    <h1 class="templett-flow-header text-primaryText">Varför Templett</h1>
+    <div
+      class="w-full h-auto flex flex-row px-8 gap-8 overflow-x-scroll overflow-y-hidden"
+    >
+      <div
+        *ngFor="let benefit of benefits"
+        #leftBenefitsDiv
+        class="flex mx-auto w-full h-auto"
+      >
+        <div
+          #benefitsCard
+          class="flex flex-col w-[80vw] h-[80vw] space-between bg-secondary rounded-default p-8"
+        >
+          <div class="w-auto h-1/5">
+            <img
+              class="h-full"
+              src="./assets/images/{{ benefit.icon }}"
+              alt="Benefit Icon"
+            />
+          </div>
+          <div class="flex-col flex w-full h-full pt-2">
+            <div class="w-full justify-center flex flex-col">
+              <h1 class="text-sm text-secondaryText text-left mt-2">
+                <span class="font-semibold"> {{ benefit.title }}. </span>
+                {{ benefit.substring }}
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,24 +1,30 @@
-import { Directive, ElementRef, Renderer2, OnInit, OnDestroy } from '@angular/core';
+import {
+  Directive,
+  ElementRef,
+  Renderer2,
+  OnInit,
+  OnDestroy,
+} from "@angular/core";
 
 @Directive({
-  selector: '[animateDivEntry]'
+  selector: "[animateDivEntry]",
 })
 export class AnimateDivDirective implements OnInit, OnDestroy {
   private intersectionObserver!: IntersectionObserver;
 
-  constructor(private elementRef: ElementRef, private renderer: Renderer2) { }
+  constructor(private elementRef: ElementRef, private renderer: Renderer2) {}
 
   ngOnInit() {
     const options = {
       root: null,
-      rootMargin: '0px',
-      threshold: 0.5 // Adjust this threshold as needed
+      rootMargin: "0px",
+      threshold: 0.2,
     };
 
-    this.intersectionObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
+    this.intersectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            console.log("intersection")
+          console.log("intersection");
           this.animateElement();
           this.intersectionObserver.unobserve(this.elementRef.nativeElement);
         }
@@ -36,6 +42,6 @@ export class AnimateDivDirective implements OnInit, OnDestroy {
 
   private animateElement() {
     // Add your animation class here
-    this.renderer.addClass(this.elementRef.nativeElement, 'animate-div');
+    this.renderer.addClass(this.elementRef.nativeElement, "animate-div");
   }
 }

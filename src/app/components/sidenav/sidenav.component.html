@@ -1,0 +1,29 @@
+<div
+  class="sidenav p-8"
+  [@sidenavAnimation]="isExpanded ? 'expanded' : 'collapsed'"
+>
+  <!-- Your side navigation menu items -->
+  <ul>
+    <li (click)="scrollToSection('aboutUsSection')">
+      <p class="text-primaryText text-lg py-2 cursor-pointer">Om</p>
+    </li>
+    <li (click)="scrollToSection('offersSection')">
+      <p class="text-primaryText text-lg py-2 cursor-pointer">Våra produkter</p>
+    </li>
+    <li (click)="scrollToSection('benefitsSection')">
+      <p class="text-primaryText text-lg py-2 cursor-pointer">
+        Varför Templett?
+      </p>
+    </li>
+    <li (click)="scrollToSection('faqSection')">
+      <p class="text-primaryText text-lg py-2 cursor-pointer">
+        Frågor och svar
+      </p>
+    </li>
+    <li (click)="scrollToSection('footerSection')">
+      <p class="text-primaryText text-lg py-2 cursor-pointer">Kontakta oss</p>
+    </li>
+
+    <!-- Add other menu items -->
+  </ul>
+</div>
