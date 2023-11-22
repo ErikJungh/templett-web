@@ -56,23 +56,20 @@ export class ScrollHeroAnimationDirective {
     this.thirdDelay = `-${thirdScroll.toFixed(2)}s`;
     this.fourthDelay = `-${fourthScroll.toFixed(2)}s`;
 
-    console.log('returning primary delay', this.primaryDelay);
     this.renderer.setStyle(
       primaryElement,
       'animation-delay',
       this.primaryDelay
     );
-    console.log('returning secondary delay', this.secondaryDelay);
+
     this.renderer.setStyle(
       secondaryElement,
       'animation-delay',
       this.secondaryDelay
     );
 
-    console.log('returning third delay', this.thirdDelay);
     this.renderer.setStyle(thirdElement, 'animation-delay', this.thirdDelay);
 
-    console.log('returning fourth delay', this.fourthDelay);
     this.renderer.setStyle(fourthElement, 'animation-delay', this.fourthDelay);
   }
 

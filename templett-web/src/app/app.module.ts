@@ -15,6 +15,7 @@ import { BenefitsSectionComponent } from './components/benefits-section/benefits
 import { FaqSectionComponent } from './components/faq-section/faq-section.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AnimateIncrementDirective } from './directives/animated-increment.directive';
+import { StickerComponent } from './components/sticker/sticker.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { AnimateIncrementDirective } from './directives/animated-increment.direc
     StatsSectionComponent,
     BenefitsSectionComponent,
     FaqSectionComponent,
+    StickerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
