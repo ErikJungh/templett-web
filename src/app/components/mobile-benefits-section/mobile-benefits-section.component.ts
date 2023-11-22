@@ -10,7 +10,7 @@ export class MobileBenefitsSectionComponent {
     {
       title: "Digitala annonsblad",
       substring:
-        "Templett-Stickers möjliggör skapandet av digitala annonsblad där butiksägare kan länka till kampanjer, produktinformation eller annat relevant innehåll på nätet. Detta erbjuder en interaktiv och engagerande upplevelse för kunder som använder NFC-aktiverade enheter när de interagerar med butikens stickers.",
+        "Templett-Stickers möjliggör skapandet av digitala annonsblad där butiksägare kan länka till kampanjer, produktinformation eller annat relevant innehåll på nätet.",
       icon: "newsletter-new.svg",
     },
     {
