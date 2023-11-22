@@ -17,7 +17,7 @@ export class OffersSectionComponent {
     },
     {
       icon: "checkmark.svg",
-      text: "Instruktionsguide",
+      text: "Instruktion på plats",
     },
     {
       icon: "checkmark.svg",
@@ -39,7 +39,7 @@ export class OffersSectionComponent {
     },
     {
       icon: "checkmark.svg",
-      text: "Instruktionsguide",
+      text: "Instruktion på plats",
     },
     {
       icon: "checkmark.svg",
@@ -61,7 +61,7 @@ export class OffersSectionComponent {
     },
     {
       icon: "checkmark.svg",
-      text: "Instruktionsguide",
+      text: "Instruktion på plats",
     },
     {
       icon: "checkmark.svg",
