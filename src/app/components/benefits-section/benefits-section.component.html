@@ -1,21 +1,35 @@
-<div class="w-full h-auto justify-center flex max-w-[1200px] mx-auto ">
-    <div class="hide-before-animate w-full"animateDivEntry>
-        <h1 class="templett-flow-header text-primaryText">Header</h1>
-    <div class="w-full h-auto grid grid-cols-2 gap-8 ">
-            <div *ngFor="let benefit of benefits" #leftBenefitsDiv class="flex  w-full h-auto ">
-                <div #benefitsCard class="flex flex-row w-full h-full space-between   bg-secondary rounded-default p-8">
-                    <div class="w-auto h-full ">
-                        <img class="h-full" src="../../../assets/images/{{benefit.icon}}" alt="Benefit Icon"/>
-                    </div>
-                    <div  class="flex-col flex w-full h-full ml-8">
-                        <div class="w-full justify-center flex flex-col"> 
-                            <h1 class="text-3xl text-secondaryText text-left font-semibold">{{benefit.title}}</h1>
-                            <h1 class="text-xl text-secondaryText text-left mt-2">{{benefit.substring}}</h1>
-                        </div>
-                    </div>
-                </div>
+<div class="w-full h-auto justify-center flex max-w-[1200px] mx-auto">
+  <div class="hide-before-animate w-full" animateDivEntry>
+    <h1 class="templett-flow-header text-primaryText">Header</h1>
+    <div class="w-full h-auto grid grid-cols-2 gap-8">
+      <div
+        *ngFor="let benefit of benefits"
+        #leftBenefitsDiv
+        class="flex w-full h-auto"
+      >
+        <div
+          #benefitsCard
+          class="flex flex-row w-full h-full space-between bg-secondary rounded-default p-8"
+        >
+          <div class="w-auto h-full">
+            <img
+              class="h-full"
+              src="./assets/images/{{ benefit.icon }}"
+              alt="Benefit Icon"
+            />
+          </div>
+          <div class="flex-col flex w-full h-full ml-8">
+            <div class="w-full justify-center flex flex-col">
+              <h1 class="text-3xl text-secondaryText text-left font-semibold">
+                {{ benefit.title }}
+              </h1>
+              <h1 class="text-xl text-secondaryText text-left mt-2">
+                {{ benefit.substring }}
+              </h1>
             </div>
-        
-        
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

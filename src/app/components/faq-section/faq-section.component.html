@@ -1,29 +1,47 @@
 <div class="w-full h-auto justify-center flex max-w-[1000px] mx-auto">
-    <div class="hide-before-animate w-full" animateDivEntry>
-      <h1 class="templett-flow-header text-primaryText">Header</h1>
-      <div class="flex flex-col w-full items-center py-4">
-        <div  class="flex flex-col w-full h-auto mx-8">
-          <div #faqCard *ngFor="let question of questions; let i = index" class="flex-col flex w-full h-full bg-secondary rounded-default px-8 py-5 my-2">
-            <div class="w-full justify-between flex flex-row">
-              <h1 class="text-3xl text-secondaryText text-left font-semibold flex items-center">
-                Question 1 Lorem Ipsum
-              </h1>
-              <img 
+  <div class="hide-before-animate w-full" animateDivEntry>
+    <h1 class="templett-flow-header text-primaryText">Header</h1>
+    <div class="flex flex-col w-full items-center py-4">
+      <div class="flex flex-col w-full h-auto mx-8">
+        <div
+          #faqCard
+          *ngFor="let question of questions; let i = index"
+          class="flex-col flex w-full h-full bg-secondary rounded-default px-8 py-5 my-2"
+        >
+          <div class="w-full justify-between flex flex-row">
+            <h1
+              class="text-3xl text-secondaryText text-left font-semibold flex items-center"
+            >
+              Question 1 Lorem Ipsum
+            </h1>
+            <img
               class="h-10"
-              src="../../../assets/images/cross.svg" 
-              alt="Bullet Point Icon" 
+              src="./assets/images/cross.svg"
+              alt="Bullet Point Icon"
               [style.transform]="isExpanded !== i ? 'rotate(45deg)' : 'none'"
               [@rotateAnimation]="isExpanded !== i ? 'rotated' : 'notRotated'"
               (click)="toggleExpand(i == isExpanded ? -1 : i)"
-            >            </div>
-            <div class="additional-text " [@expandCollapse]="isExpanded == i ? 'expanded' : 'collapsed'">
-              <!-- Additional text content to display when expanded -->
-              <!-- You can replace this with your actual content -->
-              <p class="py-4">Additional text goes here... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore..</p>
-            </div>
+            />
+          </div>
+          <div
+            class="additional-text"
+            [@expandCollapse]="isExpanded == i ? 'expanded' : 'collapsed'"
+          >
+            <!-- Additional text content to display when expanded -->
+            <!-- You can replace this with your actual content -->
+            <p class="py-4">
+              Additional text goes here... Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore.Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore..
+            </p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
+</div>
