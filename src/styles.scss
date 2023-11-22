@@ -1,0 +1,22 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "assets/styles/animate-div";
+@import "assets/styles/templett-flow-header";
+@import "assets/styles/card-ribbon";
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+// Example in your component's SCSS file
+h1,
+h2,
+h3,
+p {
+  font-family: "Poppins", sans-serif;
+}
