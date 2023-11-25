@@ -20,6 +20,7 @@ import { MobileBenefitsSectionComponent } from './components/mobile-benefits-sec
 import { MobileHeaderComponent } from './components/mobile-header/mobile-header.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { VerticalRotatingCarouselComponent } from './components/vertical-rotating-carousel/vertical-rotating-carousel.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { FooterComponent } from './components/footer/footer.component';
     MobileHeaderComponent,
     SidenavComponent,
     FooterComponent,
+    VerticalRotatingCarouselComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],

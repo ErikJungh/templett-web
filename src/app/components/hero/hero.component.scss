@@ -121,7 +121,7 @@ $stars-big: stars(100);
   margin-top: -4rem;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 320vh;
+  grid-template-rows: 200vh;
   background-color: #6200ee;
 
   .section {
@@ -165,6 +165,8 @@ $stars-big: stars(100);
         display: flex;
         width: 100%;
         padding: 10px;
+        margin-left: 1px;
+
         z-index: 40;
       }
       .animate-third {
@@ -181,6 +183,16 @@ $stars-big: stars(100);
   }
 }
 
+.center {
+  width: 100%;
+  z-index: 5;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  background-color: #2b5876;
+  top: 60vh;
+}
+
 .banner-container {
   overflow: hidden;
 }
@@ -190,21 +202,16 @@ ul {
 }
 
 .banner {
-  height: 233px;
-  width: 5550px;
+  height: 5500px;
+  width: 500px;
   margin-bottom: 80px;
 }
 
 .box {
   display: inline-block;
-
   height: 200px;
   margin: 0.5rem;
   padding: 0;
-  // background-image: url("../../../assets/images/sticker1.png");
-  // background-size: contain;
-  // background-repeat: no-repeat;
-  // color: #fff;
 }
 
 /*keyframe animations*/
@@ -214,11 +221,11 @@ ul {
 
 @keyframes bannermove {
   0% {
-    margin-left: 0px;
-    transform: translateX(0);
+    margin-bottom: 0px;
+    transform: translateY(-200vh);
   }
   100% {
-    margin-left: -2125px;
+    margin-bottom: -5150px;
   }
 }
 

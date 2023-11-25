@@ -5,10 +5,10 @@ import {
   HostListener,
   Input,
   Renderer2,
-} from '@angular/core';
+} from "@angular/core";
 
 @Directive({
-  selector: '[appScrollAnimation]',
+  selector: "[appScrollAnimation]",
 })
 export class ScrollHeroAnimationDirective {
   private primaryDelay!: string;
@@ -16,13 +16,13 @@ export class ScrollHeroAnimationDirective {
   private thirdDelay!: string;
   private fourthDelay!: string;
 
-  @HostListener('window:scroll', [])
+  @HostListener("window:scroll", [])
   scroll(): void {
-    const primaryElement = this.el.nativeElement.querySelector('.animate');
+    const primaryElement = this.el.nativeElement.querySelector(".animate");
     const secondaryElement =
-      this.el.nativeElement.querySelector('.animate-secondary');
-    const thirdElement = this.el.nativeElement.querySelector('.animate-third');
-    const fourthElement = this.el.nativeElement.querySelector('.tunnel');
+      this.el.nativeElement.querySelector(".animate-secondary");
+    const thirdElement = this.el.nativeElement.querySelector(".animate-third");
+    const fourthElement = this.el.nativeElement.querySelector(".tunnel");
 
     const rect = this.el.nativeElement.getBoundingClientRect();
 
@@ -37,8 +37,8 @@ export class ScrollHeroAnimationDirective {
     let thirdScroll = primaryScroll;
     let fourthScroll = primaryScroll;
 
-    primaryScroll = primaryScroll + 2.0;
-    secondaryScroll = secondaryScroll + 0.8;
+    primaryScroll = primaryScroll + 1.4;
+    secondaryScroll = secondaryScroll + 0.6;
     thirdScroll = thirdScroll + 0.3;
     fourthScroll = fourthScroll + 2.0;
 
@@ -58,19 +58,19 @@ export class ScrollHeroAnimationDirective {
 
     this.renderer.setStyle(
       primaryElement,
-      'animation-delay',
+      "animation-delay",
       this.primaryDelay
     );
 
     this.renderer.setStyle(
       secondaryElement,
-      'animation-delay',
+      "animation-delay",
       this.secondaryDelay
     );
 
-    this.renderer.setStyle(thirdElement, 'animation-delay', this.thirdDelay);
+    this.renderer.setStyle(thirdElement, "animation-delay", this.thirdDelay);
 
-    this.renderer.setStyle(fourthElement, 'animation-delay', this.fourthDelay);
+    this.renderer.setStyle(fourthElement, "animation-delay", this.fourthDelay);
   }
 
   private mapRange(

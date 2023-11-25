@@ -31,7 +31,7 @@ import {
         "expanded",
         style({
           transform: "translateX(0)",
-          opacity: 0.95,
+          opacity: 0.98,
         })
       ),
       transition("collapsed => expanded", animate("300ms ease-in")),
