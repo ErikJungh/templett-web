@@ -21,6 +21,7 @@ import { MobileHeaderComponent } from './components/mobile-header/mobile-header.
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { VerticalRotatingCarouselComponent } from './components/vertical-rotating-carousel/vertical-rotating-carousel.component';
+import { ProductVideoComponent } from './components/product-video/product-video.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { VerticalRotatingCarouselComponent } from './components/vertical-rotatin
     SidenavComponent,
     FooterComponent,
     VerticalRotatingCarouselComponent,
+    ProductVideoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
