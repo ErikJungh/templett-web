@@ -1,31 +1,30 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{html,ts}",
-  ],
+  content: ["./src/**/*.{html,ts}", "./projects/**/*.{html,ts}"],
+
   theme: {
     extend: {
       colors: {
         // Primary text color: white
-        primaryText: '#FFFFFF',
-        
+        primaryText: "#FFFFFF",
+
         // Secondary text color: black
-        secondaryText: '#000000',
-        
+        secondaryText: "#000000",
+
         // Dark purple primary color
-        primary: '#071420',
-        
+        primary: "#071420",
+
         // White secondary color
-        secondary: '#FFFFFF',
-        
+        secondary: "#FFFFFF",
+
         // Yellow tertiary color
-        tertiary: '#FFD700',
+        tertiary: "#FFD700",
       },
       borderRadius: {
         // Default border radius of 10px
-        'default': '4px',
+        default: "4px",
       },
     },
   },
   plugins: [],
-}
+};

@@ -34,6 +34,8 @@ import { Component, ElementRef } from "@angular/core";
 export class FooterComponent {
   constructor(private el: ElementRef) {}
 
+  contactEmail: string = "kontakt@templett.se";
+
   showPhoneInfo: boolean = false;
   showEmailInfo: boolean = false;
 

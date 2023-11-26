@@ -18,13 +18,12 @@ export class AnimateDivDirective implements OnInit, OnDestroy {
     const options = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.2,
+      threshold: 0.01,
     };
 
     this.intersectionObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          console.log("intersection");
           this.animateElement();
           this.intersectionObserver.unobserve(this.elementRef.nativeElement);
         }

@@ -3,7 +3,7 @@
   class="w-full h-auto justify-center flex max-w-[1200px] 2xl:max-w-[1200px] mx-auto"
 >
   <div class="hide-before-animate w-full" animateDivEntry>
-    <h1 class="templett-flow-header text-primaryText">Våra Erbjudanden</h1>
+    <h1 class="templett-flow-header text-primaryText">Erbjudanden</h1>
     <div class="flex flex-col lg:flex-row w-full pb-4 lg:pt-12">
       <div
         #leftOffersDiv
@@ -17,22 +17,24 @@
             <h1 class="text-3xl text-secondaryText text-center font-semibold">
               Startkit
             </h1>
-            <h1 class="text-xl text-secondaryText text-center mt-8">
+            <h1 class="text-xl text-secondaryText text-center mt-4">
               Testa flera chip
             </h1>
             <div class="w-full h-[1px] bg-primary mx-auto my-8"></div>
           </div>
           <div
             *ngFor="let bulletPoint of bulletPoints"
-            class="flex flex-row w-full justify-between my-3"
+            class="flex flex-row w-full justify-between my-2 lg:my-3"
           >
-            <div class="flex w-1/5 h-10">
+            <div class="flex w-1/5 h-8">
               <img
                 src="./assets/images/{{ bulletPoint.icon }}"
                 alt="Bullet Point Icon"
               />
             </div>
-            <p class="text-lg w-4/5 items-center flex text-left ml-4">
+            <p
+              class="text-base lg:text-lg w-4/5 items-center flex text-left ml-4"
+            >
               {{ bulletPoint.text }}
             </p>
           </div>
@@ -58,22 +60,24 @@
             <h1 class="text-3xl text-secondaryText text-center font-semibold">
               Standardkit
             </h1>
-            <h1 class="text-xl text-secondaryText text-center mt-8">
+            <h1 class="text-xl text-secondaryText text-center mt-4">
               Alla standardchip
             </h1>
             <div class="w-full h-[1px] bg-primary mx-auto my-8"></div>
           </div>
           <div
             *ngFor="let bulletPoint of bulletPoints2"
-            class="flex flex-row w-full justify-between my-3"
+            class="flex flex-row w-full justify-between my-2 lg:my-3"
           >
-            <div class="flex w-1/5 h-10">
+            <div class="flex w-1/5 h-8">
               <img
                 src="./assets/images/{{ bulletPoint.icon }}"
                 alt="Bullet Point Icon"
               />
             </div>
-            <p class="text-lg w-4/5 items-center flex text-left ml-4">
+            <p
+              class="text-base lg:text-lg w-4/5 items-center flex text-left ml-4"
+            >
               {{ bulletPoint.text }}
             </p>
           </div>
@@ -97,22 +101,24 @@
             <h1 class="text-3xl text-secondaryText text-center font-semibold">
               Dynamiskt
             </h1>
-            <h1 class="text-xl text-secondaryText text-center mt-8">
+            <h1 class="text-xl text-secondaryText text-center mt-4">
               Designa egna chip
             </h1>
             <div class="w-full h-[1px] bg-primary mx-auto my-8"></div>
           </div>
           <div
             *ngFor="let bulletPoint of bulletPoints3"
-            class="flex flex-row w-full justify-between my-3"
+            class="flex flex-row w-full justify-between my-2 lg:my-3"
           >
-            <div class="flex w-1/5 h-10">
+            <div class="flex w-1/5 h-8">
               <img
                 src="./assets/images/{{ bulletPoint.icon }}"
                 alt="Bullet Point Icon"
               />
             </div>
-            <p class="text-lg w-4/5 items-center flex text-left ml-4">
+            <p
+              class="text-base lg:text-lg w-4/5 items-center flex text-left ml-4"
+            >
               {{ bulletPoint.text }}
             </p>
           </div>
