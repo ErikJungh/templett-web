@@ -6,28 +6,30 @@
   <app-hero></app-hero>
 
   <div class="w-full h-auto bg-primary">
-    <app-about-section></app-about-section>
+    <div class="hide-before-animate" animateDivEntry>
+      <app-about-section></app-about-section>
+    </div>
 
-    <div class="mt-8 lg:mt-20">
+    <div class="pt-8 lg:pt-12 hide-before-animate" animateDivEntry>
       <app-product-video></app-product-video>
     </div>
-    <div class="mt-8 lg:mt-20">
+    <div class="pt-8 lg:pt-12 hide-before-animate" animateDivEntry>
       <app-offers-section></app-offers-section>
     </div>
 
-    <div class="lg:mt-20">
+    <div class="lg:pt-20 hide-before-animate" animateDivEntry>
       <app-stats-section></app-stats-section>
     </div>
 
-    <div class="lg:mt-20 hidden lg:block">
+    <div class="lg:pt-12 hidden lg:block hide-before-animate" animateDivEntry>
       <app-benefits-section></app-benefits-section>
     </div>
 
-    <div class="mt-20 block lg:hidden">
+    <div class="pt-12 block lg:hidden hide-before-animate" animateDivEntry>
       <app-mobile-benefits-section></app-mobile-benefits-section>
     </div>
 
-    <div class="mt-20">
+    <div class="pt-12 hide-before-animate" animateDivEntry>
       <app-faq-section></app-faq-section>
     </div>
     <app-footer></app-footer>
