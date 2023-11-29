@@ -1,17 +1,319 @@
-
-.hero-container{
-  width: 100vw;
-  height: 95vh;
-  background-color: theme('colors.primary');
-  position: static;
-  top: 0;
-  margin-top: -4rem;
+@keyframes tonext {
+  75% {
+    left: 0;
+  }
+  95% {
+    left: 100%;
+  }
+  98% {
+    left: 100%;
+  }
+  99% {
+    left: 0;
+  }
 }
 
+@keyframes tostart {
+  75% {
+    left: 0;
+  }
+  95% {
+    left: -300%;
+  }
+  98% {
+    left: -300%;
+  }
+  99% {
+    left: 0;
+  }
+}
+
+@keyframes snap {
+  96% {
+    scroll-snap-align: center;
+  }
+  97% {
+    scroll-snap-align: none;
+  }
+  99% {
+    scroll-snap-align: none;
+  }
+  100% {
+    scroll-snap-align: center;
+  }
+}
 
 body {
-  font: 14px/2 "Open sans", sans-serif;
-  letter-spacing: 0.05em;
+  max-width: 37.5rem;
+  margin: 0 auto;
+
+  font-family: "Lato", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  scrollbar-color: transparent transparent; /* thumb and track color */
+  scrollbar-width: 0px;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
+
+* {
+  -ms-overflow-style: none;
+}
+
+ol,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel {
+  height: 95vh;
+
+  perspective: 100px;
+}
+
+.carousel__viewport {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  overflow-x: scroll;
+  counter-reset: item;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel__slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  counter-increment: item;
+}
+
+.carousel__slide:nth-child(1) {
+  position: relative;
+}
+
+.carousel__slide::before {
+  content: "";
+  position: absolute;
+  margin-top: -5rem;
+  width: 100vw;
+  height: 101%;
+
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity here */
+}
+
+.carousel__slide:nth-child(1) {
+  background-image: url("https://www.alixbdanthenay.fr/wp-content/uploads/2015/07/Indispensable-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* You might need to adjust other properties based on your design */
+}
+.carousel__slide:nth-child(2) {
+  background-image: url("https://www.alixbdanthenay.fr/wp-content/uploads/2015/07/Indispensable-4-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.carousel__slide:nth-child(3) {
+  background-image: url("https://www.alixbdanthenay.fr/wp-content/uploads/2016/11/11.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.carousel__slide:nth-child(4) {
+  background-image: url("https://www.alixbdanthenay.fr/wp-content/uploads/2016/11/20mars17-sans-typo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.carousel__slide:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -40%, 70px);
+  color: #fff;
+  font-size: 2em;
+}
+
+.carousel__snapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: center;
+}
+
+@media (hover: hover) {
+  .carousel__snapper {
+    animation-name: tonext, snap;
+    animation-timing-function: ease;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+  }
+
+  .carousel__slide:last-child .carousel__snapper {
+    animation-name: tostart, snap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel__snapper {
+    animation-name: none;
+  }
+}
+
+.carousel:hover .carousel__snapper,
+.carousel:focus-within .carousel__snapper {
+  animation-name: none;
+}
+
+.carousel__navigation {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  left: 0;
+  text-align: center;
+}
+
+.carousel__navigation-list,
+.carousel__navigation-item {
+  display: inline-block;
+}
+
+.carousel__navigation-button {
+  display: inline-block;
+  width: 4.5rem;
+  height: 20px;
+
+  background-clip: content-box;
+  border-left: 0.7rem solid transparent;
+  border-right: 0.7rem solid transparent;
+  font-size: 0;
+  transition: transform 0.1s;
+}
+
+.carousel__navigation-button-line {
+  display: inline-block;
+  width: 4.5rem;
+  height: 3px;
+  margin-top: 10px;
+  background-color: #fff;
+  background-clip: content-box;
+  border-left: 0.7rem solid transparent;
+  border-right: 0.7rem solid transparent;
+
+  font-size: 0;
+  transition: transform 0.1s;
+}
+
+.carousel::before,
+.carousel::after,
+.carousel__prev,
+.carousel__next {
+  position: absolute;
+  top: 0;
+  margin-top: 50vh;
+  width: 4rem;
+  height: 4rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  font-size: 0;
+  outline: 0;
+}
+
+.carousel::before,
+.carousel__prev {
+  left: 1rem;
+}
+
+.carousel::after,
+.carousel__next {
+  right: 1rem;
+}
+
+.carousel::before,
+.carousel::after {
+  content: "";
+  z-index: 1;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  font-size: 2.5rem;
+  line-height: 4rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+.carousel::before {
+  background-image: url("../../../assets/images/chevron-left.svg");
+}
+
+.carousel::after {
+  background-image: url("../../../assets/images/chevron-right.svg");
+}
+
+.title {
+  margin: 0 auto 15px;
+  z-index: 1;
+  max-width: 1000px;
+  font: 300 50px/1.2 "Oswald", sans-serif;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+
+.text {
+  margin: 0 auto;
+  max-width: 1000px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+/* CSS for the animation effect */
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.appear-from-bottom-primary {
+  max-width: 1000px;
+
+  opacity: 0;
+  animation: slideInFromBottom 1.2s ease forwards; /* Adjust the animation duration as needed */
+}
+.appear-from-bottom-secondary {
+  max-width: 1000px;
+  opacity: 0;
+  animation-delay: 200ms !important;
+  animation: slideInFromBottom 1.2s ease forwards; /* Adjust the animation duration as needed */
+}
+.appear-from-bottom-tertiary {
+  max-width: 1000px;
+  opacity: 0;
+  animation-delay: 400ms !important;
+  animation: slideInFromBottom 1.2s ease forwards; /* Adjust the animation duration as needed */
 }
 
 .btn {
@@ -21,7 +323,7 @@ body {
   text-decoration: none;
   position: relative;
   background: transparent;
-  border: 1px solid #e1e1e1;
+  border: 2px solid #e1e1e1;
   font: 12px/1.2 "Oswald", sans-serif;
   letter-spacing: 0.4em;
   text-align: center;
@@ -66,210 +368,6 @@ body {
     &::after {
       border-color: #373737;
       transition: border 0.1s linear 0s;
-    }
-  }
-}
-
-.slideshow {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  z-index: 1;
-
-  .slideshow-inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .slides {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-
-  .slide {
-    display: none;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-
-    &.is-active {
-      display: block;
-    }
-
-    &.is-loaded {
-      opacity: 1;
-    }
-
-    .caption {
-      padding: 0 100px;
-    }
-
-    .image-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-position: center;
-      z-index: 1;
-      background-size: cover;
-      image-rendering: optimizeQuality;
-
-      &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-      }
-    }
-
-    .image {
-      width: 100%;
-      width: 100%;
-      object-fit: cover;
-      height: 100%;
-    }
-
-    &-content {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 2;
-      color: #fff;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .title {
-      margin: 0 auto 15px;
-      max-width: 1000px;
-      font: 300 50px/1.2 "Oswald", sans-serif;
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-    }
-
-    .text {
-      margin: 0 auto;
-      max-width: 1000px;
-      font-size: 18px;
-      line-height: 1.4;
-    }
-
-    .btn {
-      margin: 15px 0 0;
-      border-color: #fff;
-
-      &::before {
-        background: #fff
-      }
-    }
-  }
-
-  .pagination {
-    position: absolute;
-    bottom: 35px;
-    left: 0;
-    width: 100%;
-    height: 12px;
-    cursor: default;
-    z-index: 2;
-    text-align: center;
-
-    .item {
-      display: inline-block;
-      padding: 15px 5px;
-      position: relative;
-      width: 46px;
-      height: 32px;
-      cursor: pointer;
-      text-indent: -999em;
-      z-index: 1;
-
-      +.page {
-        margin-left: -2px;
-      }
-
-      &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 15px;
-        left: 5px;
-        width: 36px;
-        height: 2px;
-        background: rgba(255, 255, 255, 0.5);
-        transition: background 0.2s ease;
-      }
-
-      &::after {
-        width: 0;
-        background: #fff;
-        z-index: 2;
-        transition: width 0.2s ease;
-      }
-
-      &:hover::before,
-      &.is-active::before {
-        background-color: #fff;
-      }
-    }
-  }
-
-  .arrows {
-    .arrow {
-      margin: -33px 0 0;
-      padding: 20px;
-      position: absolute;
-      top: 50%;
-      cursor: pointer;
-      z-index: 3;
-    }
-
-    .prev {
-      left: 30px;
-
-      &:hover .svg {
-        left: -10px;
-      }
-    }
-
-    .next {
-      right: 30px;
-
-      &:hover .svg {
-        left: 10px;
-      }
-    }
-
-    .svg {
-      position: relative;
-      left: 0;
-      width: 14px;
-      height: 26px;
-      fill: #fff;
-      transition: left 0.2s ease;
     }
   }
 }
