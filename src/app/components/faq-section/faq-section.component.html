@@ -25,7 +25,6 @@
               alt="Bullet Point Icon"
               [style.transform]="isExpanded !== i ? 'rotate(45deg)' : 'none'"
               [@rotateAnimation]="isExpanded !== i ? 'rotated' : 'notRotated'"
-              (click)="toggleExpand(i == isExpanded ? -1 : i)"
             />
           </div>
           <div

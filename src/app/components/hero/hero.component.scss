@@ -79,10 +79,18 @@ li {
   margin: 0;
   padding: 0;
 }
+@media screen and (max-width: 768px) {
+  .carousel {
+    height: 80vh;
+  }
+  .title {
+    font-size: 20px !important;
+  }
+}
 
+/* Default height for larger screens */
 .carousel {
   height: 95vh;
-
   perspective: 100px;
 }
 
@@ -233,6 +241,11 @@ li {
   border-radius: 50%;
   font-size: 0;
   outline: 0;
+  user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
 }
 
 .carousel::before,
@@ -274,13 +287,22 @@ li {
   font: 300 50px/1.2 "Oswald", sans-serif;
   letter-spacing: 0.35em;
   text-transform: uppercase;
+  user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
 }
-
 .text {
   margin: 0 auto;
   max-width: 1000px;
   font-size: 18px;
   line-height: 1.4;
+  user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
 }
 /* CSS for the animation effect */
 @keyframes slideInFromBottom {
