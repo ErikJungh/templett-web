@@ -15,7 +15,7 @@ declare function Di(): any;
 })
 export class HeroComponent {
   constructor(private el: ElementRef) {}
-  @ViewChild('carousel', { static: true }) carousel: ElementRef | undefined;
+  @ViewChild("carousel", { static: true }) carousel: ElementRef | undefined;
 
   activeIndex: number = 1;
 
@@ -27,65 +27,60 @@ export class HeroComponent {
     }
   }
 
-  //   scrollPage(index: number) {
-  //   if (this.carousel) {
-  //     const element: HTMLElement = this.carousel.nativeElement;
-  //     const itemToScrollTo: HTMLElement | null = element.querySelector(`#carousel__slide${index}`);
-  //           console.log("scroled", itemToScrollTo?.offsetLeft)
-
-  //     if (itemToScrollTo) {
-  //       element.scroll({
-  //         left: itemToScrollTo.offsetLeft,
-  //         behavior: 'smooth'
-  //       });
-  //     }
-  //   }
-  // }
-
-   scrollPage(index: number) {
-    this.activeIndex = index;
-    const carousel = this.el.nativeElement.querySelector('.carousel__viewport');
+  scrollPage(index: number) {
+    const carousel = this.el.nativeElement.querySelector(".carousel__viewport");
     if (carousel) {
-      const slide = this.el.nativeElement.querySelector(`#carousel__slide${index}`);
+      const slide = this.el.nativeElement.querySelector(
+        `#carousel__slide${index}`
+      );
       if (slide) {
         const scrollTo = slide.offsetLeft;
-        carousel.scrollTo({ left: scrollTo, behavior: 'smooth' });
+        carousel.scrollTo({ left: scrollTo, behavior: "smooth" });
 
         // Adding a listener for the 'scroll' event to detect when the scrolling is completed
-        carousel.addEventListener('scroll', this.checkScrollComplete.bind(this));
+        carousel.addEventListener(
+          "scroll",
+          this.checkScrollComplete.bind(this)
+        );
       }
     }
   }
 
   checkScrollComplete() {
-    const carousel = this.el.nativeElement.querySelector('.carousel__viewport');
+    const carousel = this.el.nativeElement.querySelector(".carousel__viewport");
     if (carousel) {
-      carousel.removeEventListener('scroll', this.checkScrollComplete.bind(this)); // Remove the scroll event listener
+      carousel.removeEventListener(
+        "scroll",
+        this.checkScrollComplete.bind(this)
+      ); // Remove the scroll event listener
       this.checkElementsInViewport();
     }
   }
 
-
-ngOnInit(): void {
+  ngOnInit(): void {
     // Initial check when the component loads
     this.checkElementsInViewport();
+    this.scrollPage(1);
   }
 
-
   checkElementsInViewport(): void {
-    const elementsToAnimate = this.el.nativeElement.querySelectorAll('.appear-from-bottom-primary, .appear-from-bottom-secondary, .appear-from-bottom-tertiary');
+    const elementsToAnimate = this.el.nativeElement.querySelectorAll(
+      ".appear-from-bottom-primary, .appear-from-bottom-secondary, .appear-from-bottom-tertiary"
+    );
 
     elementsToAnimate.forEach((element: any) => {
       const rect = element.getBoundingClientRect();
-      const elementInView = (
+      const elementInView =
         rect.left >= 0 &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-      );
+        rect.right <=
+          (window.innerWidth || document.documentElement.clientWidth);
       if (elementInView) {
-        element.classList.add('animate');
+        if (element.id) {
+          this.activeIndex = parseInt(element.id);
+        }
+        element.classList.add("animate");
       } else {
-
-        element.classList.remove('animate');
+        element.classList.remove("animate");
       }
     });
   }

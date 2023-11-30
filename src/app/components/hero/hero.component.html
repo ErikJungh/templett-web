@@ -6,6 +6,7 @@
       <div class="carousel__snapper">
         <div class="w-full h-full justify-center flex flex-col items-center">
           <p
+            id="1"
             class="text-primaryText title appear-from-bottom-primary text-center"
           >
             Butiker
@@ -13,12 +14,13 @@
           <p class="text-primaryText text appear-from-bottom-secondary">
             Digitalisera dina kundkorgar
           </p>
-          <a
+          <button
             (click)="scrollToSection('faqSection')"
             class="btn mt-8 appear-from-bottom-tertiary cursor-pointer"
+            [disabled]="activeIndex !== 1"
           >
             <span class="btn-inner">Visa Mer</span>
-          </a>
+          </button>
         </div>
         <a (click)="scrollPage(4)" class="carousel__prev cursor-pointer"
           >Go to last slide</a
@@ -34,6 +36,7 @@
       <div class="carousel__snapper">
         <div class="w-full h-full justify-center flex flex-col items-center">
           <p
+            id="2"
             class="text-primaryText title appear-from-bottom-primary text-center"
           >
             GYM
@@ -41,12 +44,13 @@
           <p class="text-primaryText text appear-from-bottom-secondary">
             Inspirera och informera
           </p>
-          <a
+          <button
             (click)="scrollToSection('faqSection')"
             class="btn mt-8 appear-from-bottom-tertiary cursor-pointer"
+            [disabled]="activeIndex !== 2"
           >
             <span class="btn-inner">Visa Mer</span>
-          </a>
+          </button>
         </div>
         <a (click)="scrollPage(1)" class="carousel__prev cursor-pointer"
           >Go to last slide</a
@@ -62,6 +66,7 @@
       <div class="carousel__snapper">
         <div class="w-full h-full justify-center flex flex-col items-center">
           <p
+            id="3"
             class="text-primaryText title appear-from-bottom-primary text-center"
           >
             Resturanger
@@ -69,12 +74,13 @@
           <p class="text-primaryText text appear-from-bottom-secondary">
             Förbättra kundupplevelsen
           </p>
-          <a
+          <button
             (click)="scrollToSection('faqSection')"
             class="btn mt-8 appear-from-bottom-tertiary cursor-pointer"
+            [disabled]="activeIndex !== 3"
           >
             <span class="btn-inner">Visa Mer</span>
-          </a>
+          </button>
         </div>
         <a (click)="scrollPage(2)" class="carousel__prev cursor-pointer"
           >Go to last slide</a
@@ -90,6 +96,7 @@
       <div class="carousel__snapper">
         <div class="w-full h-full justify-center flex flex-col items-center">
           <p
+            id="4"
             class="text-primaryText title appear-from-bottom-primary text-center"
           >
             Marknader
@@ -97,12 +104,13 @@
           <p class="text-primaryText text appear-from-bottom-secondary">
             Holl koll på priser
           </p>
-          <a
+          <button
             (click)="scrollToSection('faqSection')"
             class="btn mt-8 appear-from-bottom-tertiary cursor-pointer"
+            [disabled]="activeIndex !== 4"
           >
             <span class="btn-inner">Visa Mer</span>
-          </a>
+          </button>
         </div>
         <a (click)="scrollPage(3)" class="carousel__prev cursor-pointer"
           >Go to last slide</a
