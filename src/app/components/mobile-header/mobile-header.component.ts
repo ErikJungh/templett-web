@@ -90,7 +90,7 @@ export class MobileHeaderComponent implements OnInit {
       document.documentElement.scrollTop ||
       document.body.scrollTop ||
       0;
-    const scroll320vh = 2 * window.innerHeight; // Calculate 320vh in pixels
+    const scroll320vh = window.innerHeight; // Calculate 320vh in pixels
 
     // Check if scroll position is greater than or equal to 320vh
     this.isScrolledPastHero = scrollPosition >= scroll320vh;

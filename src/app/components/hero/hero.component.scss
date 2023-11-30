@@ -103,21 +103,20 @@ li {
   position: relative;
   flex: 0 0 100%;
   width: 100%;
-  counter-increment: item;
 }
 
 .carousel__slide:nth-child(1) {
   position: relative;
 }
 
-.carousel__slide::before {
-  content: "";
-  position: absolute;
-  margin-top: -5rem;
-  width: 100vw;
-  height: 101%;
 
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity here */
+
+.carousel__slide .overlay {
+  position: absolute;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100%;
 }
 
 .carousel__slide:nth-child(1) {
@@ -164,8 +163,6 @@ li {
   .carousel__snapper {
     animation-name: tonext, snap;
     animation-timing-function: ease;
-    animation-duration: 12s;
-    animation-iteration-count: infinite;
   }
 
   .carousel__slide:last-child .carousel__snapper {
@@ -297,23 +294,18 @@ li {
   }
 }
 
-.appear-from-bottom-primary {
-  max-width: 1000px;
 
-  opacity: 0;
-  animation: slideInFromBottom 1.2s ease forwards; /* Adjust the animation duration as needed */
-}
-.appear-from-bottom-secondary {
-  max-width: 1000px;
-  opacity: 0;
-  animation-delay: 200ms !important;
-  animation: slideInFromBottom 1.2s ease forwards; /* Adjust the animation duration as needed */
-}
+
+
+.appear-from-bottom-primary,
+.appear-from-bottom-secondary,
 .appear-from-bottom-tertiary {
   max-width: 1000px;
   opacity: 0;
-  animation-delay: 400ms !important;
-  animation: slideInFromBottom 1.2s ease forwards; /* Adjust the animation duration as needed */
+}
+
+.animate {
+  animation: slideInFromBottom 1.2s ease forwards;
 }
 
 .btn {
