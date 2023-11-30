@@ -17,7 +17,7 @@ export class HeroComponent {
   constructor(private el: ElementRef) {}
   @ViewChild('carousel', { static: true }) carousel: ElementRef | undefined;
 
-  activeIndex: number = 0;
+  activeIndex: number = 1;
 
   scrollToSection(targetSectionId: string) {
     const targetEl =
@@ -43,6 +43,7 @@ export class HeroComponent {
   // }
 
    scrollPage(index: number) {
+    this.activeIndex = index;
     const carousel = this.el.nativeElement.querySelector('.carousel__viewport');
     if (carousel) {
       const slide = this.el.nativeElement.querySelector(`#carousel__slide${index}`);

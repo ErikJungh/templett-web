@@ -118,6 +118,7 @@
       <li class="carousel__navigation-item">
         <a
           (click)="scrollPage(1)"
+          [ngClass]="activeIndex === 1 ? 'opacity-90' : 'opacity-30'"
           class="carousel__navigation-button cursor-pointer"
           ><div class="carousel__navigation-button-line"></div>
         </a>
@@ -125,6 +126,7 @@
       <li class="carousel__navigation-item">
         <a
           (click)="scrollPage(2)"
+          [ngClass]="activeIndex === 2 ? 'opacity-90' : 'opacity-30'"
           class="carousel__navigation-button cursor-pointer"
           ><div class="carousel__navigation-button-line"></div
         ></a>
@@ -132,6 +134,7 @@
       <li class="carousel__navigation-item">
         <a
           (click)="scrollPage(3)"
+          [ngClass]="activeIndex === 3 ? 'opacity-90' : 'opacity-30'"
           class="carousel__navigation-button cursor-pointer"
           ><div class="carousel__navigation-button-line"></div
         ></a>
@@ -139,6 +142,7 @@
       <li class="carousel__navigation-item">
         <a
           (click)="scrollPage(4)"
+          [ngClass]="activeIndex === 4 ? 'opacity-90' : 'opacity-30'"
           class="carousel__navigation-button cursor-pointer"
           ><div class="carousel__navigation-button-line"></div
         ></a>
