@@ -10,7 +10,7 @@ export class BenefitsSectionComponent {
     {
       title: "Digitala annonsblad",
       substring:
-        "Templett-Stickers möjliggör skapandet av digitala annonsblad där butiksägare kan länka till kampanjer, produktinformation eller annat relevant innehåll på nätet.",
+        "Templett-Stickers möjliggör skapandet av digitala annonsblad där butiksägare kan länka till kampanjer, produktinformation eller annat relevant innehåll på nätet som ofta glöms bort.",
       icon: "newsletter-new.svg",
     },
     {
