@@ -117,12 +117,11 @@ li {
   position: relative;
 }
 
-
-
 .carousel__slide .overlay {
   position: absolute;
   top: 0px;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(7, 20, 32, 0.6);
+
   width: 100vw;
   height: 100%;
 }
@@ -242,10 +241,10 @@ li {
   font-size: 0;
   outline: 0;
   user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -o-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 
 .carousel::before,
@@ -288,21 +287,22 @@ li {
   letter-spacing: 0.35em;
   text-transform: uppercase;
   user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -o-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 .text {
   margin: 0 auto;
   max-width: 1000px;
   font-size: 18px;
+  font: 300 22px/1.2 "Oswald", sans-serif;
   line-height: 1.4;
   user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -o-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 /* CSS for the animation effect */
 @keyframes slideInFromBottom {
@@ -315,9 +315,6 @@ li {
     transform: translateY(0);
   }
 }
-
-
-
 
 .appear-from-bottom-primary,
 .appear-from-bottom-secondary,

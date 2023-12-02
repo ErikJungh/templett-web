@@ -2,3 +2,12 @@
   background-color: theme("colors.primary");
   transition: background-color 0.5s ease; /* Adjust the duration and timing function as needed */
 }
+
+.logo {
+  font-family: "rowdies", Arial, sans-serif;
+  /* Fallback fonts (Arial, sans-serif) will be used if 'rowdies' is unavailable */
+}
+
+.text {
+  font: 500 18px/1.2 "Oswald", sans-serif;
+}

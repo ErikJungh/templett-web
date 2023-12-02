@@ -9,21 +9,18 @@
 html,
 body {
   height: 100%;
-  overflow-x: hidden;
+
   margin: 0;
   padding: 0;
 }
 
-
-
-.h1{
-      margin: 0 auto 15px;
-      z-index: 1;
-      max-width: 1000px;
-      font: 300 50px/1.2 "Oswald", sans-serif;
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-    
+.h1 {
+  margin: 0 auto 15px;
+  z-index: 1;
+  max-width: 1000px;
+  font: 300 50px/1.2 "Oswald", sans-serif;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
 }
 
 h2,
