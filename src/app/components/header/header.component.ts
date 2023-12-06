@@ -11,7 +11,17 @@ export class HeaderComponent {
     const targetEl =
       this.el.nativeElement.ownerDocument.getElementById(targetSectionId);
     if (targetEl) {
-      targetEl.scrollIntoView({ behavior: "smooth" });
+      targetEl.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "start",
+        scrollIntoViewOptions: {
+          block: "start",
+          inline: "start",
+          behavior: "smooth",
+          offsetTop: 1000,
+        },
+      });
     }
   }
 

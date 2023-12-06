@@ -18,7 +18,7 @@
 
     <a
       class="backToTopButton cursor-pointer"
-      href="https://www.linkedin.com/in/erik-junghahn-751a3215b/"
+      href="https://www.linkedin.com/company/templett-ab"
       target="_blank"
     >
       <img class="invert opacity-75" src="./assets/images/linkedin.svg" />
@@ -28,17 +28,35 @@
     <p
       *ngIf="showPhoneInfo"
       [@fadeInOut]
-      class="text-primaryText font-semibold"
+      class="text-primaryText font-semibold cursor-pointer position-relative"
+      #phoneInfo
+      (click)="onPhoneInfoClick()"
     >
       +46 793 479 334
+      <span *ngIf="!phoneInfoCopied" class="tooltip">Kopiera</span>
+      <span
+        *ngIf="phoneInfoCopied"
+        (mouseleave)="onMouseLeave()"
+        class="tooltip"
+        >Kopierad!</span
+      >
     </p>
 
     <p
       *ngIf="showEmailInfo"
       [@fadeInOut]
-      class="text-primaryText font-semibold"
+      class="text-primaryText font-semibold cursor-pointer position-relative"
+      #mailInfo
+      (click)="onMailInfoClick()"
     >
       {{ contactEmail }}
+      <span *ngIf="!emailInfoCopied" class="tooltip">Kopiera</span>
+      <span
+        *ngIf="emailInfoCopied"
+        (mouseleave)="onMouseLeave()"
+        class="tooltip"
+        >Kopierad!</span
+      >
     </p>
   </div>
   <div class="flex">

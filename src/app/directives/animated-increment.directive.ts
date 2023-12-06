@@ -30,7 +30,7 @@ export class AnimateIncrementDirective implements OnInit, OnDestroy {
 
   private animateValue(start: number, end: number) {
     let current = start;
-    const increment = Math.ceil(end / 100); // Adjust increment value for smoother animation
+    const increment = Math.ceil(end / 100);
 
     const interval = setInterval(() => {
       current += increment;
@@ -38,10 +38,10 @@ export class AnimateIncrementDirective implements OnInit, OnDestroy {
         current = end;
         clearInterval(interval);
       }
-      this.elementRef.nativeElement.textContent = current.toString(); // Update element with the current value
+      this.elementRef.nativeElement.textContent = current.toString();
       if (current == end) {
         this.elementRef.nativeElement.textContent = "Kommer snart";
       }
-    }, 20); // Adjust the interval for desired animation speed
+    }, 10);
   }
 }

@@ -5,7 +5,7 @@ import {
   transition,
   trigger,
 } from "@angular/animations";
-import { Component, ElementRef, Renderer2 } from "@angular/core";
+import { Component, ElementRef, Renderer2, ViewChild } from "@angular/core";
 
 @Component({
   selector: "app-footer",
@@ -32,12 +32,18 @@ import { Component, ElementRef, Renderer2 } from "@angular/core";
   ],
 })
 export class FooterComponent {
+  @ViewChild("phoneInfo", { static: false }) phoneInfo!: ElementRef;
+  @ViewChild("mailInfo", { static: false }) mailInfo!: ElementRef;
+
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   contactEmail: string = "kontakt@templett.se";
 
   showPhoneInfo: boolean = false;
   showEmailInfo: boolean = false;
+
+  emailInfoCopied: boolean = false;
+  phoneInfoCopied: boolean = false;
 
   ngOnInit() {
     const screenHeight = window.innerHeight;
@@ -65,5 +71,38 @@ export class FooterComponent {
     if (targetEl) {
       targetEl.scrollIntoView({ behavior: "smooth" });
     }
+  }
+
+  copyToClipboard(text: string) {
+    const tempTextArea = this.renderer.createElement("textarea");
+    tempTextArea.value = text;
+    this.renderer.appendChild(document.body, tempTextArea);
+    tempTextArea.select();
+    document.execCommand("copy");
+    this.renderer.removeChild(document.body, tempTextArea);
+
+    console.log("Content copied to clipboard: " + text);
+  }
+
+  onPhoneInfoClick() {
+    this.phoneInfoCopied = true;
+    const phoneInfoText = this.phoneInfo.nativeElement.textContent.trim();
+    const splitText = phoneInfoText.split(" ");
+    splitText.pop();
+    const phoneNumber = splitText.join(" ");
+    this.copyToClipboard(phoneNumber);
+  }
+
+  onMailInfoClick() {
+    this.emailInfoCopied = true;
+    const emailInfoText = this.mailInfo.nativeElement.textContent.trim();
+    const splitText = emailInfoText.split(" ");
+    splitText.pop();
+    const email = splitText.join(" ");
+    this.copyToClipboard(email);
+  }
+  onMouseLeave() {
+    this.emailInfoCopied = false;
+    this.phoneInfoCopied = false;
   }
 }

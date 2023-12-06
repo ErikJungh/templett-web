@@ -5,3 +5,28 @@
     #000000
   );
 }
+
+.position-relative {
+  position: relative;
+}
+
+/* Styling for the tooltip */
+.tooltip {
+  visibility: hidden;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+/* Show the tooltip on hover */
+.position-relative:hover .tooltip {
+  visibility: visible;
+}

@@ -53,7 +53,7 @@ export class ManualDownloadsComponent {
     {
       title: "Templett Modulära NFC-Stickers - Matbutiker",
       body: "Templett_NFC_Stickers_Användarmanual_svenska.pdf ",
-      href: "https://mag.wcoomd.org/uploads/2018/05/blank.pdf",
+      href: "https://drive.google.com/uc?export=download&id=186NegHRc_Y4Vayvke9P9NLkicdiwFEui",
     },
     {
       title: "Templett Modulära NFC-Stickers - Gym",

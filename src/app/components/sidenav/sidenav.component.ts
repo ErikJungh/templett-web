@@ -59,7 +59,19 @@ export class SidenavComponent {
     const targetEl =
       this.el.nativeElement.ownerDocument.getElementById(targetSectionId);
     if (targetEl) {
-      targetEl.scrollIntoView({ behavior: "smooth" });
+      targetEl.scrollIntoView({
+        behavior: "smooth",
+        block: "start", // Align to the start of the element
+        inline: "start", // Align to the start of the element
+        // Adding an offset to the scroll position
+        // Note: scrollIntoViewOptions might not be supported in all browsers
+        scrollIntoViewOptions: {
+          block: "start",
+          inline: "start",
+          behavior: "smooth",
+          offsetTop: 100, // Adjust this to set the offset from the top
+        },
+      });
     }
   }
 }
