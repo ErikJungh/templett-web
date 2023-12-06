@@ -3,12 +3,16 @@
     height: 330px !important;
     display: flex;
     align-items: flex-end;
+            justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
     .sticker-div {
-        height: 180px !important;
+        height: 250px !important;
         justify-content: center;
+        display: flex;
+        align-items: center;
+        margin: auto;
     }
 }
 .sticker{
