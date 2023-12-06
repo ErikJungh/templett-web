@@ -5,7 +5,7 @@ import {
   transition,
   trigger,
 } from "@angular/animations";
-import { Component, ElementRef } from "@angular/core";
+import { Component, ElementRef, Renderer2 } from "@angular/core";
 
 @Component({
   selector: "app-footer",
@@ -32,12 +32,21 @@ import { Component, ElementRef } from "@angular/core";
   ],
 })
 export class FooterComponent {
-  constructor(private el: ElementRef) {}
+  constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   contactEmail: string = "kontakt@templett.se";
 
   showPhoneInfo: boolean = false;
   showEmailInfo: boolean = false;
+
+  ngOnInit() {
+    const screenHeight = window.innerHeight;
+
+    let element = document.getElementById("footerSection");
+    if (element) {
+      this.renderer.setStyle(element, "height", `${screenHeight * 0.4}px`);
+    }
+  }
 
   togglePhoneInfo() {
     this.showPhoneInfo = !this.showPhoneInfo;
