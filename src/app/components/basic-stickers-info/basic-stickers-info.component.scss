@@ -1,33 +1,32 @@
 .sticker-div {
-    width: 100% !important;
-    height: 330px !important;
-    display: flex;
-    align-items: flex-end;
-            justify-content: center;
+  width: 100% !important;
+  height: 330px !important;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
-    .sticker-div {
-        height: 250px !important;
-        justify-content: center;
-        display: flex;
-        align-items: center;
-        margin: auto;
-    }
+  .sticker-div {
+    height: 250px !important;
+    justify-content: center;
+    display: flex;
+
+    margin: auto;
+  }
 }
-.sticker{
-    position: fixed;
-    transform-origin: top left;
-    transform: rotate(270deg);
-    margin-left: -50px;
-    opacity: 0.3;
+.sticker {
+  position: fixed;
+  transform-origin: top left;
+  transform: rotate(270deg);
+  margin-left: -50px;
+  opacity: 0.3;
 }
 
 .sticker:nth-child(1) {
-    margin-bottom: -40px;
+  margin-bottom: -40px;
 }
 
 .sticker:nth-child(2) {
-        margin-bottom: -20px;
+  margin-bottom: -20px;
 }
-
