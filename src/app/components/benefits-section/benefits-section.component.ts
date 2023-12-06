@@ -16,19 +16,19 @@ export class BenefitsSectionComponent {
     {
       title: "Rekommendera recept",
       substring:
-        "Med Templett-Stickers kan butiksägare enkelt dela recept eller matrelaterade tips till sina kunder. Genom att länka NFC-chippen till receptsidor eller matbloggar kan butiken erbjuda värdefulla råd eller inspirera kunderna till nya matupplevelser.",
+        "Med Templett-Stickers kan butiksägare enkelt dela recept eller matrelaterade tips till sina kunder och generea merförsäljning. Genom att länka chippen inuti Templett-stickers till receptsidor eller matbloggar kan butiken erbjuda värdefulla råd eller inspirera kunderna till nya matupplevelser.",
       icon: "recipe.svg",
     },
     {
       title: "Öka försäljning",
       substring:
-        "Genom att använda Templett-Stickers kan butiksägare locka fler kunder och öka försäljningen. De kan marknadsföra produkter, kampanjer eller erbjudanden direkt till kundernas smartphones när de interagerar med NFC-stickers i butiken.",
+        "Genom att använda Templett-Stickers kan butiksägare locka fler kunder och öka försäljningen. De kan marknadsföra produkter, kampanjer eller erbjudanden direkt till kundernas smartphones när de interagerar med Templett-stickers i butiken.",
       icon: "chart.svg",
     },
     {
       title: "Uppmärksamma rabatter",
       substring:
-        "Templett-Stickers möjliggör en effektiv marknadsföring av rabatter eller specialerbjudanden. Butiksägare kan skapa NFC-länkar till sidor med kampanjkoder eller kuponger för att locka kunder till att göra inköp i butiken.",
+        "Templett-Stickers möjliggör en effektiv marknadsföring av rabatter eller specialerbjudanden. Butiksägare kan skapa länkar till sidor med kampanjkoder eller kuponger för att locka kunder till att göra inköp i butiken.",
       icon: "pricetag.svg",
     },
     {

@@ -1,18 +1,18 @@
-import { Directive, ElementRef, Input, OnDestroy, OnInit } from '@angular/core';
+import { Directive, ElementRef, Input, OnDestroy, OnInit } from "@angular/core";
 
 @Directive({
-  selector: '[animateIncrement]'
+  selector: "[animateIncrement]",
 })
 export class AnimateIncrementDirective implements OnInit, OnDestroy {
-  @Input('animateIncrement') finalValue: number = 0;
+  @Input("animateIncrement") finalValue: number = 0;
   private observer: IntersectionObserver | undefined;
   private animated: boolean = false;
 
   constructor(private elementRef: ElementRef) {}
 
   ngOnInit() {
-    this.observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
+    this.observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting && !this.animated) {
           this.animateValue(0, this.finalValue);
           this.animated = true;
@@ -39,6 +39,9 @@ export class AnimateIncrementDirective implements OnInit, OnDestroy {
         clearInterval(interval);
       }
       this.elementRef.nativeElement.textContent = current.toString(); // Update element with the current value
+      if (current == end) {
+        this.elementRef.nativeElement.textContent = "Kommer snart";
+      }
     }, 20); // Adjust the interval for desired animation speed
   }
 }

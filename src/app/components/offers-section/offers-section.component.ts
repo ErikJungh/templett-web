@@ -9,67 +9,67 @@ export class OffersSectionComponent {
   public bulletPoints: { icon: String; text: String }[] = [
     {
       icon: "checkmark.svg",
-      text: "50 Chippade stickers",
+      text: "Träningsprogram och övningar",
     },
     {
       icon: "checkmark.svg",
-      text: "50x3 Modulstickers",
+      text: "Nyheter och info",
     },
     {
       icon: "checkmark.svg",
-      text: "Instruktion på plats",
+      text: "Kost och näringsråd",
     },
     {
       icon: "checkmark.svg",
-      text: "Kl 8-18 Kundservice",
+      text: "Erbjudanden",
     },
     {
-      icon: "cross.svg",
-      text: "Designa egna modulstickers",
+      icon: "checkmark.svg",
+      text: "Evenemang och pass",
     },
   ];
   public bulletPoints2: { icon: String; text: String }[] = [
     {
       icon: "checkmark.svg",
-      text: "200 Chippade stickers",
+      text: "Veckans annonsblad",
     },
     {
       icon: "checkmark.svg",
-      text: "200x4 modulstickers",
+      text: "Frukost, lunch och middags-tips",
     },
     {
       icon: "checkmark.svg",
-      text: "Instruktion på plats",
+      text: "Säsongsvaror",
     },
     {
       icon: "checkmark.svg",
-      text: "Kl 6-23 Kundservice",
+      text: "Butiksinformation och nyheter",
     },
     {
-      icon: "cross.svg",
-      text: "Designa egna modulstickers",
+      icon: "checkmark.svg",
+      text: "Jobbannonser",
     },
   ];
   public bulletPoints3: { icon: String; text: String }[] = [
     {
       icon: "checkmark.svg",
-      text: "200 Chippade stickers",
+      text: "Webbshop",
     },
     {
       icon: "checkmark.svg",
-      text: "200x4 modulstickers",
+      text: "Nyhetsbrev och information",
     },
     {
       icon: "checkmark.svg",
-      text: "Instruktion på plats",
+      text: "Event och workshops",
     },
     {
       icon: "checkmark.svg",
-      text: "Kl 6-23 Kundservice",
+      text: "Öppettider",
     },
     {
       icon: "checkmark.svg",
-      text: "Designa egna modulstickers",
+      text: "Din egna idé",
     },
   ];
   constructor(private el: ElementRef) {}

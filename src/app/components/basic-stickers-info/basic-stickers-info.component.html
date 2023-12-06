@@ -1,0 +1,41 @@
+<div
+  id="aboutUsSection"
+  class="w-full h-auto justify-center flex max-w-[1000px] mx-auto flex-col"
+>
+  <h1 class="templett-flow-header text-primaryText">Våra Produkter</h1>
+
+  <div
+    class="flex flex-col-reverse lg:flex-row-reverse w-[80%] pt-12 gap-8 mx-auto"
+  >
+    <div #leftAboutUsDiv class="flex flex-col w-full lg:w-1/2">
+      <h1 class="text-3xl font-semibold pb-3 text-primaryText">
+        Templett Stickers
+      </h1>
+      <p class="text-primaryText">
+        Templett erbjuder en bred uppsättning av digitala stickers. Alla våra
+        stickers är utrustade med NFC-Chip som gör det möjligt att hålla en
+        smartphone mot texten på stickern och bli vidareskickad till en valfri
+        webbplats.
+      </p>
+      <p class="text-primaryText pt-3">
+        Dessa stickers kan placeras vartsomhelst i en butik eller annan
+        verksamhet och närsomhelst uppdateras med nya webbplatser genom att
+        sätta över en ny modul-sticker med en ny text och genom vår kundservice
+        eller kundportal ändra vilken länk chippet ska leda till.
+      </p>
+    </div>
+    <div #sticker container class="flex w-full lg:w-1/2 lg:mx-4">
+      <div class="sticker-div">
+        <div class="sticker" rotateOnScroll [rotationIncrement]="30">
+          <app-sticker [title]="'Veckans erbjudanden'"></app-sticker>
+        </div>
+        <div class="sticker" rotateOnScroll [rotationIncrement]="50">
+          <app-sticker [title]="'Veckans Middagstips'"></app-sticker>
+        </div>
+        <div class="sticker" rotateOnScroll [rotationIncrement]="70">
+          <app-sticker [title]="'Frukt och grönt i säsong'"></app-sticker>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
