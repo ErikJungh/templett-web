@@ -531,6 +531,9 @@ video {
 .z-\[1000\] {
   z-index: 1000;
 }
+.z-\[9999\] {
+  z-index: 9999;
+}
 .m-auto {
   margin: auto;
 }
@@ -574,6 +577,9 @@ video {
 }
 .mt-8 {
   margin-top: 2rem;
+}
+.box-border {
+  box-sizing: border-box;
 }
 .block {
   display: block;
@@ -854,6 +860,9 @@ video {
 }
 .text-center {
   text-align: center;
+}
+.align-baseline {
+  vertical-align: baseline;
 }
 .text-2xl {
   font-size: 1.5rem;
