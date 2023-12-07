@@ -38,13 +38,15 @@
               class="w-full justify-between flex flex-col lg:flex-row pt-8 pb-4"
             >
               <a
-                target="_blank"
+                download="desired_filename.ext"
+                (click)="$event.stopPropagation()"
                 href="{{ question.href }}"
                 class="cursor-pointer hover:underline hover:text-blue-500 font-semibold truncate max-w-[100%]"
                 >{{ question.body }}</a
               >
               <a
-                target="_blank"
+                download="desired_filename.ext"
+                (click)="$event.stopPropagation()"
                 href="{{ question.href }}"
                 class="flex items-center gap-1 cursor-pointer hover:underline hover:text-blue-500 font-semibold whitespace-nowrap"
               >

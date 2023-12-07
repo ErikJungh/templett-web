@@ -13,8 +13,9 @@ declare function Di(): any;
   templateUrl: "./hero.component.html",
   styleUrls: ["./hero.component.scss"],
 })
-export class HeroComponent {
-  constructor(private el: ElementRef) {}
+export class HeroComponent implements OnInit {
+  constructor(private el: ElementRef, private renderer: Renderer2) {}
+
   @ViewChild("carousel", { static: true }) carousel: ElementRef | undefined;
 
   activeIndex: number = 1;
@@ -58,7 +59,14 @@ export class HeroComponent {
   }
 
   ngOnInit(): void {
-    // Initial check when the component loads
+    // Set the height of the hero to a fixed height initially
+    const screenHeight = window.innerHeight;
+
+    let element = document.getElementById("carousel");
+    if (element) {
+      this.renderer.setStyle(element, "height", `${screenHeight * 0.95}px`);
+    }
+
     this.checkElementsInViewport();
     this.scrollPage(1);
   }
