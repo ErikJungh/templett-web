@@ -34,9 +34,9 @@ export class HeaderComponent {
       document.documentElement.scrollTop ||
       document.body.scrollTop ||
       0;
-    const scroll320vh = window.innerHeight; // Calculate 320vh in pixels
+    const heightLimit = 0.85 * window.innerHeight; // Calculate 320vh in pixels
 
     // Check if scroll position is greater than or equal to 320vh
-    this.isScrolledPastHero = scrollPosition >= scroll320vh;
+    this.isScrolledPastHero = scrollPosition >= heightLimit;
   }
 }
