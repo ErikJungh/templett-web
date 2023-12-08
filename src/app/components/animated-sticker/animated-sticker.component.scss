@@ -38,18 +38,23 @@ body {
 }
 
 #app {
-  height: 20vmin;
+  height: 19vmin;
   width: 90vmin;
+  max-width: 800px;
+  max-height: 230px;
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateX(30vw) rotateX(-20deg) rotateY(-55deg);
+  margin-left: auto;
+  margin-right: auto;
+  transform: rotateX(-20deg) rotateY(-55deg);
   background: var(--color-blue);
   border-radius: 2vmin;
   perspective: 10000px;
 
   &:before {
-    border: 10vmin solid white;
+    border: 2vmin solid white;
+    background: white;
     border-left-width: 2vmin;
     border-right-width: 2vmin;
     border-radius: inherit;
@@ -59,10 +64,8 @@ body {
     width: 100%;
     top: 0;
     left: 0;
-    border: 10vmin solid white;
     border-left-width: 2vmin;
     border-right-width: 2vmin;
-    background: var(--color-blue);
   }
 
   > .papers,
@@ -96,37 +99,18 @@ body {
 }
 @media screen and (max-width: 1024px) {
   #app {
-    transform: translateX(20vw) rotateX(-20deg) rotateY(-55deg);
-  }
-}
-
-.paper-shadow {
-  background: var(--color-shadow);
-  height: 50%;
-  width: 100%;
-  position: absolute;
-  top: calc(100% + 3vmin);
-  left: 0;
-  transform-origin: top center;
-  animation: shadow-in var(--duration) var(--easing) infinite;
-  animation-delay: calc(var(--i) * var(--stagger));
-  animation-fill-mode: both;
-
-  @keyframes shadow-in {
-    0%,
-    5% {
-      transform: scale(0.8, 1) translateY(var(--offscreen));
-    }
-    100% {
-      transform: scale(0.8, 0);
+    &:before {
+      border-radius: 2vmin;
     }
   }
 }
 
 .papers {
   width: 60vmin;
-  height: 20vmin;
+  height: 19vmin;
   background: white;
+  max-width: 700px;
+  max-height: 230px;
 }
 
 .paper {
@@ -173,34 +157,34 @@ body {
   }
   //Våra erbjudanden header
   &.i-0 {
-    background-image: url("../../../assets/images/sticker-fragments/sticker_fragment_6.png");
+    background-image: url("../../../assets/images/sticker_fragment_6.png");
   }
   &.i-1 {
-    background-image: url("../../../assets/images/sticker-fragments/sticker_fragment_7.png");
+    background-image: url("../../../assets/images/sticker_fragment_7.png");
   }
   //Veckans middagstips header
   &.i-2 {
-    background-image: url("../../../assets/images/sticker-fragments/sticker_fragment_8.png");
+    background-image: url("../../../assets/images/sticker_fragment_8.png");
   }
   &.i-3 {
-    background-image: url("../../../assets/images/sticker-fragments/sticker_fragment_9.png");
+    background-image: url("../../../assets/images/sticker_fragment_9.png");
   }
   //Frukt o grönt header
   &.i-4 {
-    background-image: url("../../../assets/images/sticker-fragments/sticker_fragment_1.png");
+    background-image: url("../../../assets/images/sticker_fragment_1.png");
   }
   &.i-5 {
-    background-image: url("../../../assets/images/sticker-fragments/sticker_fragment_2.png");
+    background-image: url("../../../assets/images/sticker_fragment_2.png");
   }
   //Body pieces
   &.i-6 {
-    background-image: url("../../../assets/images/sticker-fragments/sticker_fragment_3.png");
+    background-image: url("../../../assets/images/sticker_fragment_3.png");
   }
   &.i-7 {
-    background-image: url("../../../assets/images/sticker-fragments/sticker_fragment_4.png");
+    background-image: url("../../../assets/images/sticker_fragment_4.png");
   }
   &.i-8 {
-    background-image: url("../../../assets/images/sticker-fragments/sticker_fragment_5.png");
+    background-image: url("../../../assets/images/sticker_fragment_5.png");
   }
 
   animation: inherit;

@@ -1,4 +1,11 @@
-import { Directive, ElementRef, Input, OnDestroy, OnInit } from "@angular/core";
+import {
+  Directive,
+  ElementRef,
+  Input,
+  OnDestroy,
+  OnInit,
+  Renderer2,
+} from "@angular/core";
 
 @Directive({
   selector: "[animateIncrement]",
@@ -8,7 +15,7 @@ export class AnimateIncrementDirective implements OnInit, OnDestroy {
   private observer: IntersectionObserver | undefined;
   private animated: boolean = false;
 
-  constructor(private elementRef: ElementRef) {}
+  constructor(private elementRef: ElementRef, private renderer: Renderer2) {}
 
   ngOnInit() {
     this.observer = new IntersectionObserver((entries) => {
@@ -40,7 +47,15 @@ export class AnimateIncrementDirective implements OnInit, OnDestroy {
       }
       this.elementRef.nativeElement.textContent = current.toString();
       if (current == end) {
-        this.elementRef.nativeElement.textContent = "Kommer snart";
+        const element = this.elementRef.nativeElement;
+
+        element.textContent = "Kommer snart";
+
+        this.renderer.addClass(element, "pulsate-once");
+
+        setTimeout(() => {
+          this.renderer.removeClass(element, "pulsate-once");
+        }, 1000);
       }
     }, 10);
   }

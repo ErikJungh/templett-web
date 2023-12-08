@@ -1,0 +1,25 @@
+.pulsate-once {
+    animation: pulsate .3s ease-in-out;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+                opacity: 0.6;
+        
+    }
+    33% {
+        transform: scale(1.1);
+                opacity: 0.8;
+    }
+
+    66% {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+                opacity: 1;
+    }
+}
