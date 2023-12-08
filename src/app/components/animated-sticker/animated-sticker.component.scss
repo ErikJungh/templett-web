@@ -189,11 +189,11 @@ body {
 
   border-top: none;
   border-bottom: none;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 
   > .segment {
-    top: 94%;
+    top: 98%;
   }
   //Våra erbjudanden header
   &.i-0 {
