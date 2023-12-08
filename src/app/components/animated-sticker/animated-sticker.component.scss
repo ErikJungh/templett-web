@@ -84,18 +84,6 @@ body {
     border-radius: inherit;
     transform: translateZ(1.5vmin);
   }
-
-  > .shadow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform-origin: bottom center;
-    transform: rotateX(90deg);
-    background: transparent;
-    border-radius: inherit;
-  }
 }
 @media screen and (max-width: 1024px) {
   #app {
@@ -111,17 +99,61 @@ body {
   background: white;
   max-width: 700px;
   max-height: 230px;
+  > .stickerID {
+    position: absolute;
+    bottom: 10px;
+    left: -55px;
+    background: inherit;
+    font-weight: 600;
+    height: 20%;
+    width: 20%;
+    font-size: 32px;
+    color: red;
+    &:before {
+      position: absolute;
+      transform: translateZ(3vmin);
+    }
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateZ(1.5vmin);
+    }
+  }
+  > .nfcChip {
+    margin: auto;
+
+    top: 25%;
+    font-weight: 600;
+    height: 50%;
+    width: 20%;
+
+    background-image: url("../../../assets/images/nfc-chip.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    &:before {
+      position: absolute;
+      transform: translateZ(3vmin);
+    }
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateZ(1.5vmin);
+    }
+  }
 }
 
 .paper {
   --segments: 5;
-  --segment: calc(100% * 1 / var(--segments));
+  --segment: calc(100% / var(--segments));
   position: absolute;
   top: 0;
   left: 0;
+  transform: translateZ(-0.01vmin);
+
   height: 100%;
   width: 100%;
-
   animation: fly-in var(--duration) var(--easing) infinite;
   animation-delay: calc((var(--i) * var(--stagger)));
 
@@ -157,31 +189,31 @@ body {
   }
   //Våra erbjudanden header
   &.i-0 {
-    background-image: url("../../../assets/images/sticker_fragment_6.png");
+    background-image: url("../../../assets/images/sticker_fragment_9.png");
   }
   &.i-1 {
-    background-image: url("../../../assets/images/sticker_fragment_7.png");
+    background-image: url("../../../assets/images/sticker_fragment_6.png");
   }
   //Veckans middagstips header
   &.i-2 {
-    background-image: url("../../../assets/images/sticker_fragment_8.png");
+    background-image: url("../../../assets/images/sticker_fragment_7.png");
   }
   &.i-3 {
-    background-image: url("../../../assets/images/sticker_fragment_9.png");
+    background-image: url("../../../assets/images/sticker_fragment_8.png");
   }
   //Frukt o grönt header
   &.i-4 {
-    background-image: url("../../../assets/images/sticker_fragment_1.png");
+    background-image: url("../../../assets/images/sticker_fragment_2.png");
   }
   &.i-5 {
-    background-image: url("../../../assets/images/sticker_fragment_2.png");
+    background-image: url("../../../assets/images/sticker_fragment_3.png");
   }
   //Body pieces
   &.i-6 {
-    background-image: url("../../../assets/images/sticker_fragment_3.png");
+    background-image: url("../../../assets/images/sticker_fragment_4.png");
   }
   &.i-7 {
-    background-image: url("../../../assets/images/sticker_fragment_4.png");
+    background-image: url("../../../assets/images/sticker_fragment_1.png");
   }
   &.i-8 {
     background-image: url("../../../assets/images/sticker_fragment_5.png");
