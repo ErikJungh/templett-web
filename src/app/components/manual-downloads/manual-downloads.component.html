@@ -48,16 +48,17 @@
                 download="desired_filename.ext"
                 (click)="$event.stopPropagation()"
                 href="{{ question.href }}"
-                class="flex items-center gap-1 cursor-pointer hover:underline hover:text-blue-500 font-semibold whitespace-nowrap"
+                class="flex items-center gap-1 cursor-pointer hover:underline hover:text-blue-500 font-semibold whitespace-nowrap btn"
               >
-                Ladda ner
-                <span>
+                <div class="flex flex-row gap-x-4 justify-between">
+                  <p class="btn-inner flex">Ladda ner</p>
+
                   <img
-                    class="cursor-pointer h-5 w-5"
+                    class="cursor-pointer h-5 w-5 btn-inner flex"
                     src="./assets/images/download.svg"
                     alt="Download icon"
                   />
-                </span>
+                </div>
               </a>
             </div>
             <p class="py-4" *ngIf="!question.href">
