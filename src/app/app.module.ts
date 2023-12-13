@@ -25,7 +25,8 @@ import { VerticalRotatingCarouselComponent } from "./components/vertical-rotatin
 import { ProductVideoComponent } from "./components/product-video/product-video.component";
 import { ManualDownloadsComponent } from "./components/manual-downloads/manual-downloads.component";
 import { BasicStickersInfoComponent } from "./components/basic-stickers-info/basic-stickers-info.component";
-import { AnimatedStickerComponent } from './components/animated-sticker/animated-sticker.component';
+import { AnimatedStickerComponent } from "./components/animated-sticker/animated-sticker.component";
+import { provideClientHydration } from "@angular/platform-browser";
 
 @NgModule({
   declarations: [
@@ -54,7 +55,7 @@ import { AnimatedStickerComponent } from './components/animated-sticker/animated
     AnimatedStickerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
-  providers: [],
+  providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
