@@ -705,6 +705,9 @@ video {
 .max-w-\[400px\] {
   max-width: 400px;
 }
+.max-w-\[800px\] {
+  max-width: 800px;
+}
 .scale-110 {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
@@ -730,6 +733,9 @@ video {
 .scroll-my-20 {
   scroll-margin-top: 5rem;
   scroll-margin-bottom: 5rem;
+}
+.scroll-mt-8 {
+  scroll-margin-top: 2rem;
 }
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));

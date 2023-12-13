@@ -3,7 +3,7 @@
   class="flex flex-col w-full bg-primary footer justify-evenly items-center"
 >
   <div class="flex">
-    <p class="text-primaryText text-xl font-semibold">Hör av er till oss!</p>
+    <h4 class="text-primaryText text-xl font-semibold">Hör av er till oss!</h4>
   </div>
   <div
     class="flex text-primaryText flex-row w-[80%] max-w-[400px] justify-evenly"
@@ -25,7 +25,7 @@
     </a>
   </div>
   <div class="overlay h-6">
-    <p
+    <h6
       *ngIf="showPhoneInfo"
       [@fadeInOut]
       class="text-primaryText font-semibold cursor-pointer position-relative"
@@ -40,9 +40,9 @@
         class="tooltip"
         >Kopierad!</span
       >
-    </p>
+    </h6>
 
-    <p
+    <h6
       *ngIf="showEmailInfo"
       [@fadeInOut]
       class="text-primaryText font-semibold cursor-pointer position-relative"
@@ -57,12 +57,12 @@
         class="tooltip"
         >Kopierad!</span
       >
-    </p>
+    </h6>
   </div>
   <div class="flex">
-    <p class="text-primaryText text-lg font-semibold">
+    <h4 class="text-primaryText text-lg font-semibold">
       © Templett 2023-2024 Göteborg
-    </p>
+    </h4>
   </div>
   <div class="backToTopButton cursor-pointer" (click)="scrollToSection('body')">
     <img class="invert" src="./assets/images/chevron-up.svg" />

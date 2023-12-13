@@ -1,6 +1,6 @@
 <div class="w-full h-auto justify-center flex max-w-[1200px] mx-auto">
   <div class="hide-before-animate w-full" animateDivEntry>
-    <h1 class="templett-flow-header text-primaryText">Varför Templett?</h1>
+    <h2 class="templett-flow-header text-primaryText">Varför Templett?</h2>
     <div class="w-full h-auto grid grid-cols-2 gap-8 p-8">
       <div
         *ngFor="let benefit of benefits"
@@ -20,10 +20,10 @@
           </div>
           <div class="flex-col flex w-full h-full ml-8">
             <div class="w-full justify-center flex flex-col">
-              <h1 class="text-md text-secondaryText text-left mt-2">
+              <h2 class="text-md text-secondaryText text-left mt-2">
                 <span class="font-semibold"> {{ benefit.title }}. </span>
                 {{ benefit.substring }}
-              </h1>
+              </h2>
             </div>
           </div>
         </div>
