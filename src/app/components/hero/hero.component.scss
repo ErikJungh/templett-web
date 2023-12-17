@@ -124,23 +124,22 @@ li {
 }
 
 .carousel__slide:nth-child(1) {
-  background-image: url("https://www.alixbdanthenay.fr/wp-content/uploads/2015/07/Indispensable-1.jpg");
+  background-image: url("../../../assets/images/hero-1.webp");
   background-size: cover;
   background-repeat: no-repeat;
-  /* You might need to adjust other properties based on your design */
 }
 .carousel__slide:nth-child(2) {
-  background-image: url("https://www.alixbdanthenay.fr/wp-content/uploads/2015/07/Indispensable-4-1.jpg");
+  background-image: url("../../../assets/images/hero-2.webp");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .carousel__slide:nth-child(3) {
-  background-image: url("https://www.alixbdanthenay.fr/wp-content/uploads/2016/11/11.jpg");
+  background-image: url("../../../assets/images/hero-3.webp");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .carousel__slide:nth-child(4) {
-  background-image: url("https://www.alixbdanthenay.fr/wp-content/uploads/2016/11/20mars17-sans-typo.jpg");
+  background-image: url("../../../assets/images/hero-4.webp");
   background-size: cover;
   background-repeat: no-repeat;
 }
