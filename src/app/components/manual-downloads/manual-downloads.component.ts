@@ -49,7 +49,7 @@ import {
 })
 export class ManualDownloadsComponent {
   isExpanded = -1;
-  public questions: { title: String; body: String; href?: String }[] = [
+  public manuals: { title: String; body: String; href?: String }[] = [
     {
       title: "Templett Modulära NFC-Stickers - Matbutiker",
       body: "Templett_NFC_Stickers_Användarmanual_svenska.pdf ",

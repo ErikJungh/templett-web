@@ -8,7 +8,7 @@
       <div class="flex flex-col w-[90%] lg:w-full h-auto mx-8">
         <div
           #faqCard
-          *ngFor="let question of questions; let i = index"
+          *ngFor="let manual of manuals; let i = index"
           class="flex-col flex w-full h-full bg-secondary rounded-default px-8 py-5 my-2 hide-before-animate cursor-pointer"
           (click)="toggleExpand(i == isExpanded ? -1 : i)"
           animateDivEntry
@@ -17,7 +17,7 @@
             <h5
               class="text-md lg:text-3xl text-secondaryText text-left font-semibold flex items-center"
             >
-              {{ question.title }}
+              {{ manual.title }}
             </h5>
             <img
               class="h-10 cursor-pointer"
@@ -34,20 +34,20 @@
             <!-- Additional text content to display when expanded -->
             <!-- You can replace this with your actual content -->
             <div
-              *ngIf="question.href"
+              *ngIf="manual.href"
               class="w-full justify-between flex flex-col lg:flex-row pt-8 pb-4"
             >
               <a
                 download="desired_filename.ext"
                 (click)="$event.stopPropagation()"
-                href="{{ question.href }}"
-                class="cursor-pointer hover:underline hover:text-blue-500 font-semibold truncate max-w-[100%]"
-                >{{ question.body }}</a
+                href="{{ manual.href }}"
+                class="cursor-pointer hover:underline hover:text-blue-500 font-semibold truncate max-w-[100%] flex items-center"
+                >{{ manual.body }}</a
               >
               <a
                 download="desired_filename.ext"
                 (click)="$event.stopPropagation()"
-                href="{{ question.href }}"
+                href="{{ manual.href }}"
                 class="flex items-center gap-1 cursor-pointer hover:underline hover:text-blue-500 font-semibold whitespace-nowrap btn"
               >
                 <div class="flex flex-row gap-x-4 justify-between">
@@ -61,8 +61,8 @@
                 </div>
               </a>
             </div>
-            <p class="py-4" *ngIf="!question.href">
-              {{ question.body }}
+            <p class="py-4" *ngIf="!manual.href">
+              {{ manual.body }}
             </p>
           </div>
         </div>

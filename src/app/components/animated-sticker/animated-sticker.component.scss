@@ -157,14 +157,13 @@ body {
   --segment: calc(100% / var(--segments));
   position: absolute;
   top: 0;
+
   left: 0;
   transform: translateZ(-0.02vmin);
-
   height: 100%;
   width: 100%;
   animation: fly-in var(--duration) var(--easing) infinite;
   animation-delay: calc((var(--i) * var(--stagger)));
-
   @keyframes fly-in {
     0%,
     2% {
