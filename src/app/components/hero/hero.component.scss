@@ -87,8 +87,7 @@ li {
 
 /* Default height for larger screens */
 .carousel {
-  height: 95vh;
-  perspective: 100px;
+  height: 99vh !important;
 }
 
 .carousel__viewport {
